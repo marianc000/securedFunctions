@@ -1,0 +1,17 @@
+{
+  "name": "cloud-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @google-cloud/functions-framework --target=run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.2",
+    "busboy": "^1.6.0" 
+  },
+  "type": "module",
+  "description": ""
+}

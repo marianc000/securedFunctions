@@ -1,0 +1,8 @@
+gcloud functions deploy screenshot --gen2 --runtime=nodejs20 --region=europe-west6 --source=. --entry-point=run --trigger-http  
+
+
+FOR /F %A IN ('gcloud auth print-identity-token') DO curl -X POST https://europe-west6-positive-tracer-432214-n8.cloudfunctions.net/screenshot -H "Authorization: Bearer %~A" -H "Content-Type: application/x-www-form-urlencoded" -d "p=1"
+
+FOR /F %A IN ('gcloud auth print-identity-token') DO curl -X GET https://europe-west6-positive-tracer-432214-n8.cloudfunctions.net/screenshot -H "Authorization: Bearer %~A"  
+
+curl https://europe-west6-positive-tracer-432214-n8.cloudfunctions.net/screenshot

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Authenticate in Google Cloud function",
+  "description": "Upload web page screenshots as you take them. POST requests include the source page URL, user's Google identity, custom parameters",
+  "version": "0.0.1",
+  "icons": {
+    "128": "imgs/off.png"
+  },
+  "background": {
+    "service_worker": "sw/sw.js",
+    "type": "module"
+  },
+  "action": {},
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "identity"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjOvvMAlgt070V/DyRLmUd/Ko9mi0WZwTKZOAp1r1+yvhzyj5DytTjd/8fQp7/KHJueDzT+NBrmiFBS8ES1NaFmNCCK8sLIIDrSukXlml6EcWpHP43I1dN/HcA9DNZtVGqmXXH2hIIHrNHwbYnqV/UHGTRqEFOB6AoTmiE3+NFt5O6eIf/iEDHWgnaxpMzsHNzMngfG4mr3RLmVZ8l4qH4/gj2UtMSgCN+lTd+leG4TumTUtXqs2VEwQAzZfxI61o3D5mE1eF1hyHzPvtCqaLaeTZhZYYVXTg7F34G/bXagQPT70fSGRgk1yUGdEcUCbMPaVDJL20Vkxr1qInGBs+fwIDAQAB"
+}
